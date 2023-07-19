@@ -1,5 +1,6 @@
 package com.example.interview.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class Book {
 
   @ManyToOne(cascade = CascadeType.ALL)
   @JoinColumn
+  @JsonIgnore
   private Library library;
 
 }

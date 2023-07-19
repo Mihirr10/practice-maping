@@ -20,6 +20,6 @@ public class Library {
   private String city;
 
   @OneToMany(mappedBy = "library")
-  @JsonIgnore
+
   private List<Book> books;
 }
